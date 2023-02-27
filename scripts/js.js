@@ -40,8 +40,12 @@ function find_sim() {
         else
             result[a] = 1;
     }
-    for (var key in result)
-        document.write('Число ' + key + ' == ' + result[key] + 'раз(а) <br>');
+    let resText = "";
+    for (var key in result){
+        var str = 'Число ' + key + ' == ' + result[key] + 'раз(а) <br>';
+        resText += str
+    }
+    document.querySelector(".output_b").innerHTML += resText;
 
 }
 
